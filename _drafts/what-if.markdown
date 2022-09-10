@@ -3,8 +3,13 @@ layout: post
 title:  "What if?"
 tags: if
 ---
+## TRY
+Les conditionnels, plus spécifiquement les `if/else`. Ils font partie intégrante de toutes les applications. Sans eux, une méthode retournerait toujours le même résultat, quoi que...
+
+
 ### `NULL` proxy
-Débutons par une assignation toute simple. La méthode `detect` accepte de zéro à un argument.
+
+Débutons par une méthode toute simple.
 ```PHP
 public function detect(?string $type = null)
 {
@@ -16,6 +21,9 @@ public function detect(?string $type = null)
 }
 ```
 
+Nous pouvons utiliser l'opérateur `Null coalescent` (`??`) pour remplacer ce `if`. Cet opérateur existe depuis PHP 7.
+Il retourne le premier opérande s'il existe et n'a pas une valeur **`null`**; et retourne le second opérande sinon.
+
 ```PHP
 public function detect(?string $type = null)
 {
@@ -24,7 +32,8 @@ public function detect(?string $type = null)
     // reste de la méthode
 }
 ```
-Est-ce que c'est plus clair? Pas nécessairement. Une question plus valide serait se demande si cette condition ne devrait pas se trouver à un niveau plus haut, à l'appel de la méthode!
+
+Est-ce que cela rend la méthode `detect` plus facile à lire? Pas nécessairement. Une meilleure question serait de demander si cette condition ne devrait pas se trouver à un niveau plus haut, à l'appel de la méthode par exemple.
 
 ```PHP
 public function detect(string $type = 'default')
@@ -32,12 +41,35 @@ public function detect(string $type = 'default')
     // reste de la méthode
 }
 ```
+
 En modifiant la signature de la méthode ainsi, il nous est possible d'avoir le même effet en restant simple.
 
-### What about some `else`?
-Il arrive des fois que nous voyons des `if/else` qui ressemble quelque peu à ça :
+Personnellement, je préfère être `strict` et spécifique lorsque j'écris. J'utiliser une signature simple et je laisse l'application gérer les erreurs.
+
 ```PHP
-public function detect(string $type = 'default')
+public function detect(string $type)
+{
+    // reste de la méthode
+}
+```
+
+De cette façon, si la variable `$type` n'est pas une `string`, une `Exception` sera lancé.
+
+Si nous devons ajouter une validation, il faudrait se poser la question si nous la plaçons dans la méthode `detect` ou avant son appel. Il serait toujours idéal d'avoir une classe de validation si nous avons besoin de valider des valeurs.
+
+
+### What about some `else`?
+
+Il arrive parfois que nous voyons des `if/else` qui ressemblent à ça :
+
+```PHP
+// que pour l'exemple
+public function exec()
+{
+    $this->detect('default');
+}
+
+public function detect(string $type)
 {
     if ($type === 'default') {
         $valeur = 0;
@@ -47,9 +79,55 @@ public function detect(string $type = 'default')
     // some code
 }
 ```
-Il est possible d'assigner une valeur par défaut au lieu de dépendre du `else` dans des situations semblables.
+
+Au plus simple, que pour les cas similaires, il est possible d'utiliser l'opérateur ternaire.
+
 ```PHP
-public function detect(string $type = 'default')
+// que pour l'exemple
+public function exec()
+{
+    $this->detect('default');
+}
+
+public function detect(string $type)
+{
+    $valeur = $type === 'default' ? 0 : 1;
+
+    // some code
+}
+```
+
+Mais dans un cas aussi simple, il est aussi possible d'inverser la condition et de faire un `cast` du `bool` en `int`.
+
+```PHP
+// que pour l'exemple
+public function exec()
+{
+    $this->detect('default');
+}
+
+public function detect(string $type)
+{
+    $valeur = (int) $type !== 'default';
+
+    // some code
+}
+```
+
+Je ne le suggère pas par contre. Nous simplifions la condition, mais nous augmentons énormément l'effort cognitif nécessaire pour comprendre ce qui se passe.
+
+Pennons un chemin alternatif pour démontrer d'autres cas possibles.
+
+Il est possible d'assigner une valeur par défaut au lieu de dépendre du `else` dans des situations semblables.
+
+```PHP
+// que pour l'exemple
+public function exec()
+{
+    $this->detect('default');
+}
+
+public function detect(string $type)
 {
     $valeur = 1;
     if ($type === 'default') {
@@ -58,9 +136,17 @@ public function detect(string $type = 'default')
     // some code
 }
 ```
+
 Certains cas sont impossibles à changer par contre, mais plusieurs peuvent être modifiés pour retourner un élément.
+
 ```PHP
-public function detect(string $type = 'default')
+// que pour l'exemple
+public function exec()
+{
+    $this->detect('default');
+}
+
+public function detect(string $type)
 {
     if ($type === 'default') {
         // some code
@@ -71,22 +157,34 @@ public function detect(string $type = 'default')
     return 1;
 }
 ```
+
 Oui, nous doublons le nombre de retours, mais nous retirons une complexité visuelle.
 
+
 ### no `if`
-Dans certain cas, il nous est possible de se demander si l'utilisation d'un `if` est vraiment nécessaire.
+
+Dans certain cas, il nous est possible de se demander si l'utilisation d'un `if` est vraiment nécessaire. Cette méthode plus adéquate pour des `loop`, mais est quand même une alternative aux `if`.
+
 ```PHP
 const TYPES = [
     'default' => 0,
     'autre' => 1,
 ];
 
-public function detect(string $type = 'default')
+// que pour l'exemple
+public function exec()
+{
+    $this->detect('default');
+}
+
+public function detect(string $type)
 {
     return self::TYPES[$type];
 }
 ```
+
 Certes, de cette façon la méthode `detect` peut lancer des exceptions. Tout dépend du "use case", il pourrait être préférable d'avoir une exception ou encore d'avoir une valeur par défaut. Si nous voulons avoir un défaut, il est possible de modifier la ligne de retour pour quelque chose de similaire.
+
 ```PHP
 const DEFAULT_TYPE = 'default';
 const TYPES = [
@@ -99,11 +197,87 @@ public function detect(?string $type = null)
     return self::TYPES[$type] ?? self::TYPES[self::DEFAULT_TYPE];
 }
 ```
+
 Il est à noter que j'utilise des constantes dans mes exemples. Elles servent à faciliter les changements de valeur sans aller les modifier dans la logique du traitement. Si nous voulons changer le type par défaut, nous le modifions qu'à un seul endroit.
 Pour ceux qui ont remarqué, la signature de la méthode est revenue celle du départ. L'utilisation de la constante `DEFAULT_TYPE` signale le type par défaut désiré.
 
 
-#### Note
-Il se peut que l'application soit en transition et qu'il serait préférable d'utiliser un retour hâtif en début de méthode. Ces conditions permettent à l'application de bien fonctionner.
+### OBJECTion!
+
+Il arrive parfois qu'un que des conditions cachent des classes. Vous en avez probablement vu, voici à quoi ils ressemblent.
+
+```PHP
+if ($type['hasClient']) {
+	return $type['clients'];
+} elseif ($type['hasCustomer']) {
+    return $type['customers'];
+}
+return 0;
+```
+
+Dans cet exemple, il se pourrait que `$type` soit un `stdObject` et non un `array`, les deux sont similaires. Nous avons ici, une classe qui devrait en être deux.
+
+```PHP
+interface hasClientele
+{
+    pubic function hasClientele(): bool;
+    public function getClientele(): array;
+}
+
+final class Restaurant implement hasClientele
+{
+    private array $clientele;
+    // stuff
+    public function hasClientele()
+    {
+        return count($this->clientele) > 0;
+    }
+    public function getClientele()
+    {
+        return $this->clientele;
+    }
+    // more stuff
+}
+
+final class Bar implement hasClientele
+{
+    private array $customers;
+    // stuff
+    public function hasClientele()
+    {
+        return count($this->customers) > 0;
+    }
+    public function getClientele()
+    {
+        return $this->clientele;
+    }
+    // more stuff
+}
+```
+
+Maintenant que les deux classes utilisent les mêmes méthodes et ont les mêmes signatures, il est possible de simplement modifier notre condition du début pour qu'elle ressemble à ceci :
+
+```PHP
+if ($type->hasClientele()) {
+	return $type->getClientele();
+}
+return 0;
+```
+
+En utilisant des classes, il est possible de faire beaucoup plus de chose que de seulement récupérer des éléments d'un `array`.
+
+
+## CATCH
+
+Il se peut que l'application soit en transition et qu'il serait préférable d'utiliser un retour hâtif en début de méthode. Ces `if` permettent à l'application de bien fonctionner.
 
 Tous les projets ayant un certain vécu sont différents. Certain favorise des retours hâtifs, ~~d'autre préfère lancer des exceptions~~ et d'autre ne font absolument rien.
+
+
+## FINALLY
+
+Finalement, les variantes présentées sont une piste pour entamer l'amélioration du code source de l'application. Il ne faut pas tout prendre au pied de la lettre, mais regarder ce qui peut être réalisé, analyser la solution désirée et l'implémenter.
+
+Il n'y a pas une alternative meilleure qu'une autre. Personnellement, j'aime une `exception` bien placé dans l'application.
+
+Dans certain cas les `if` signalent un [`code smell`](https://refactoring.guru/refactoring/smells) qui devrait être corrigé.
