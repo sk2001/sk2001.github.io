@@ -23,6 +23,7 @@ public function detect(?string $type = null)
 
 Nous pouvons utiliser l'opérateur `Null coalescent` (`??`) pour remplacer ce `if`. Cet opérateur existe depuis PHP 7.
 Il retourne le premier opérande s'il existe et n'a pas une valeur **`null`**; et retourne le second opérande sinon.
+Pour ceux qui ont l'œil, c'est quand même encore un `if` bien caché!
 
 ```PHP
 public function detect(?string $type = null)
@@ -33,7 +34,11 @@ public function detect(?string $type = null)
 }
 ```
 
-Est-ce que cela rend la méthode `detect` plus facile à lire? Pas nécessairement. Une meilleure question serait de demander si cette condition ne devrait pas se trouver à un niveau plus haut, à l'appel de la méthode par exemple.
+Est-ce que cela rend la méthode `detect` plus facile à lire?
+Pas nécessairement. 
+Une meilleure question serait de demander si cette condition ne devrait pas se trouver à un niveau plus haut,
+à l'appel de la méthode par exemple.
+Encore une fois, c'est encore essentiellement un `if`.
 
 ```PHP
 public function detect(string $type = 'default')
