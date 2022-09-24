@@ -281,3 +281,5 @@ Finalement, les variantes présentées sont une piste pour entamer l'améliorati
 Il n'y a pas une alternative meilleure qu'une autre. Personnellement, j'aime une `exception` bien placé dans l'application.
 
 Dans certain cas les `if` signalent un [`code smell`](https://refactoring.guru/refactoring/smells) qui devrait être corrigé.
+
+Dans tous les cas, les `if` signale des routes que les utilisateurs peuvent prendre, ce qui augmente la complexité de l'application.
