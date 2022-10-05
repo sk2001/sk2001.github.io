@@ -46,7 +46,6 @@ Une autre approche est de modifier l'application pour répondre à nos besoins. 
 Lorsque nous voulons réaliser quelque chose de plus grand que soit, il faut diviser les tâches à accomplir dans le but d'avoir des petites modifications facilement réalisables. Si nous pennons de trop grande bouchés, nous n'y arriverons pas.
 
 Comme toute sorte de restructuration, il faut avoir un plan. Qu'il soit réalisé de toutes pièces pour répondre à nos besoins, qu'il soit trouvé sur Internet et adopté ou encore qu'il soit la modification d'un plan existant n'est pas ce qu'il y a de plus important.
-
 Ce qui est nécessaire, c'est d'en avoir un.
 
 Une fois que nous en avons un, il faut s'assurer qu'il répond à nos besoins! Ok, j'aurais pu en parler avant. Je suggère de prendre connaissance de ce livre [Modernizing Legacy Applications In PHP](https://leanpub.com/mlaphp). Cet ouvrage est un "cookbook" pour moderniser une application legacy, en suivant toutes les étapes, vous aurez une application testable et répondant à de bon standard de programmation.
