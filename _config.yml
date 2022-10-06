@@ -21,7 +21,7 @@
 title: SK2001
 email: sebastien@similiar.ca
 description: >- # this means to ignore newlines until "baseurl:"
-  J'œuvre dans le WEB, plus spécifiquement en "backend", depuis 2013. La majorité de mon expérience se trouve à utiliser PHP.
+  J'œuvre dans le WEB, plus spécifiquement en "backend", encore plus spécifiquement en PHP, depuis 2013.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sk2001.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
