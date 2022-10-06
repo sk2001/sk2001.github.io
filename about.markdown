@@ -3,7 +3,7 @@ layout: page
 title: À propos
 permalink: /me/
 ---
-Salut! Je me présente, Sébastien. J'œuvre dans le WEB, plus spécifiquement en "backend", depuis 2013. La majorité de mon expérience se trouve à utiliser PHP.
+Salut! Je me présente, Sébastien. J'œuvre dans le WEB, plus spécifiquement en "backend", encore plus spécifiquement en PHP, depuis 2013.
 
 Je suis ce que nous pouvons appeler un passionné, avec une bibliothèque bien garni pour agrandir mes connaissances. J'ai toujours un livre à mes côtés pour continuer à m'améliorer.
 
@@ -14,7 +14,7 @@ Je suis quelqu'un qui tient à cœur les produits sur lesquels je travaille. La 
 ---
 
 ### PROGI (2021 - AUJOUD'HUI)
-#### Programmeur PHP
+#### Développeur PHP
 C'est ici que je suis rendu, bientôt ma première année.
 
 ---
