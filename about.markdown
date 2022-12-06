@@ -13,14 +13,14 @@ Je suis quelqu’un qui tient à cœur les produits sur lesquels je travaille. L
 
 ---
 
-### PROGI (2021 - AUJOUD’HUI)
-#### Développeur PHP
+### PROGI
+#### 2021 - AUJOUD’HUI
 Il faudrait que je commence à mettre à jour cette section!
 
 ---
 
-### BRITELYNX (2019 - 2021)
-#### Architect PHP
+### BRITELYNX
+#### 2019 - 2021
 Qui aurait cru? 
 À partir de ce moment, j’ai gouté au télétravail et j’ai adoré! 
 Quelques mois après avoir entamé mon nouvel emploi en télétravail, ce dernier devient obligatoire. 
@@ -34,8 +34,8 @@ en passant par la structure complète de l’application.
 
 ---
 
-### NUMERIQUE.CA (2015 - 2019)
-#### Développeur PHP
+### NUMERIQUE.CA
+#### 2015 - 2019
 Numérique.ca m’a permis d’approfondir mes connaissances PHP avec leur CMS personnalisé. 
 En travaillant pour plusieurs clients ayant tous des besoins grandement différent. 
 Que ce soit pour la location de chalet avec un système d’enchère ou encore pour développer un système de génération de contenu, j’ai appris beaucoup chez Numérique.ca. 
@@ -57,8 +57,8 @@ J’ai aussi fait mes premiers pas avec [vue.js](https://vuejs.org/).
 
 ---
 
-### LATE NIGHT STUDIO (2013 - 2015)
-#### Programmeur PHP
+### LATE NIGHT STUDIO
+#### 2013 - 2015
 Nous avons tous débuté quelque part. 
 Pour ma part, mon cheminement débute ici. 
 Dans cet emploi, j’ai réalisé des sites WEB simple à l’aide de CMS (système de gestion de contenu) comme [CMS Made Simple](http://www.cmsmadesimple.org/) et [WordPress](https://wordpress.com/). 
