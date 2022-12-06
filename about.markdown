@@ -15,7 +15,7 @@ Je suis quelqu’un qui tient à cœur les produits sur lesquels je travaille. L
 
 ### PROGI (2021 - AUJOUD’HUI)
 #### Développeur PHP
-C’est ici que je suis rendu, bientôt ma première année.
+Il faudrait que je commence à mettre à jour cette section!
 
 ---
 
