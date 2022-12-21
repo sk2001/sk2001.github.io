@@ -13,8 +13,11 @@ Je suis quelqu’un qui tient à cœur les produits sur lesquels je travaille. L
 
 ---
 
-### PROGI
+### PROGI - Trois-Rivière
 #### 2021 - AUJOUD’HUI
+- Maintenir et améliorer l’application
+- Moderniser l’application actuelle
+
 Il faudrait que je commence à mettre à jour cette section!
 
 ---
