@@ -28,12 +28,14 @@ Qui aurait cru?
 À partir de ce moment, j’ai gouté au télétravail et j’ai adoré! 
 Quelques mois après avoir entamé mon nouvel emploi en télétravail, ce dernier devient obligatoire. 
 Je ne dresserai pas un dessin de ce dernier, car tout le monde sait comment ça s’est passé. 
+
 C’est aussi à partir de ce moment que je deviens le seul responsable d’une application. 
 Cette dernière n’a pas eu l’amour qu’elle aurait dû avoir et je prends la responsabilité de cette dernière. 
-J’ai commencé par prendre connaissance de cette application, car plus personne n’en était responsable. 
+J’ai commencé par prendre connaissance de cette application, car plus personne n’en était responsable.
 J’ai pris le temps qu’il me fallait pour la comprendre et corriger plusieurs des problèmes. 
 D’une migration de SVN à GIT en gardant l’historique complet à une mise à jour de PHP 
-en passant par la structure complète de l’application.
+en passant par la structure complète de l’application tout en continuant le développement
+sans oublier le changement complet du système de migration.
 
 ---
 
