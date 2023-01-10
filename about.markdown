@@ -50,3 +50,6 @@ C’est aussi ici que j’ai découvert la magie des `containers` avec Docker. U
 #### 2013 - 2015
 Nous avons tous débuté quelque part. Pour ma part, mon cheminement débute ici. Dans cet emploi, j’ai réalisé des sites WEB simple à l’aide de CMS (système de gestion de contenu) comme [CMS Made Simple](http://www.cmsmadesimple.org/) et [WordPress](https://wordpress.com/). C’est dans ces deux CMS que j’ai commencé la programmation PHP et que j’ai eu la piqûre.
 
+---
+
+Vous voulez me rencontrer? Pourquoi pas prendre [rendez-vous](https://calendly.com/sk2001)?
