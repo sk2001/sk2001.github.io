@@ -13,12 +13,21 @@ Je suis quelqu’un qui tient à cœur les produits sur lesquels je travaille. L
 
 ---
 
-### PROGI
-#### 2021 - AUJOUD’HUI
-- Maintenir et améliorer l’application
-- Moderniser l’application actuelle
+### GENIUS
+#### 2023 - Aujourd'hui
+Quoi dire de Genius? Un tremplin vers de nouveaux horizons!
 
-Il faudrait que je commence à mettre à jour cette section!
+C'est ici que j'ajoute officiellement une nouvelle corde à mon arc, celle de DevOps. En plus de continuer ce que j'aime faire, soit de mettre à jour des système `legacy`. Ici, j'attaque les problèmes avec toutes les connaissances dont mon expérience a su acquérir.
+
+---
+
+### PROGI
+#### 2021 - 2023
+Chez Progi, j'ai continué d'approfondir mon apprentissage d'amélioration et de mise à jour d'un monolithe maison réalisé en PHP. Dans une équipe en pleine implémentation à l'agilité, les défis sont loin d'être absent.
+
+J'ai profité de cette expérience pour débuter mon apprentissage de Ansible, un outil qui me servira probablement plus dans le futur.
+
+Après un peu plus d'un ans avec eux, ne me sentant pas à ma place, j'ai été chercher de nouveau défis.
 
 ---
 
