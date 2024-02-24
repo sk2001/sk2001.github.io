@@ -23,7 +23,7 @@ C'est ici que j'ajoute officiellement une nouvelle corde à mon arc, celle de De
 
 ### PROGI
 #### 2021 - 2023
-Chez Progi, j'ai continué d'approfondir mon apprentissage d'amélioration et de mise à jour d'un monolithe maison réalisé en PHP. Dans une équipe en pleine implémentation à l'agilité, les défis sont loin d'être absent.
+Chez Progi, j'ai continué l'amélioration et la mise à jour d'un monolithe maison réalisé en PHP. Dans une équipe en pleine implémentation à l'agilité, les défis sont loin d'être absent.
 
 J'ai profité de cette expérience pour débuter mon apprentissage de Ansible, un outil qui me servira probablement plus dans le futur.
 
