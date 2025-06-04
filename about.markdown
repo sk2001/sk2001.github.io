@@ -19,6 +19,8 @@ Quoi dire de Genius? Un tremplin vers de nouveaux horizons!
 
 C'est ici que j'ajoute officiellement une nouvelle corde à mon arc, celle de DevOps. En plus de continuer ce que j'aime faire, soit de mettre à jour des système `legacy`. Ici, j'attaque les problèmes avec toutes les connaissances dont mon expérience a su acquérir.
 
+À partir de 2024, j'ai pris le rôle de chef d'équipe pour l'équipe DevOps. Ce sont de nouveaux défis encore une fois qui se sont offert à moi.
+
 ---
 
 ### PROGI
